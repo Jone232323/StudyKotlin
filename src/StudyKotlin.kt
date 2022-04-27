@@ -8,6 +8,10 @@ fun main(args: Array<String>){
 
     lainKillBuffolo()
 
+    addCompanianObjeck()
+
+    useInsertSort(arrayOf(5,8,3,9,4,1,56,9,5,2,4,77))
+
 }
 fun getNull(){
 
@@ -29,4 +33,29 @@ fun lainKillBuffolo(){
 
     println("Буйвал мёртв ${buffalo.isDaed}")
 
+}
+fun addCompanianObjeck(){
+
+    Train.getRaspisanie()
+}
+
+fun  useInsertSort(mas:Array<Int>){
+    println(" ")
+    mas.forEach { print("${it} " ) }
+
+    var n=mas.size-1
+
+    for (top in 1..n){
+        var k = top
+
+        while (k>0 && mas[k]<mas[k-1]){
+            var per = mas[k]
+            mas[k]=mas[k-1]
+            mas[k-1]=per
+            k--
+        }
+    }
+    println(" ")
+
+    mas.forEach { print("${it} " ) }
 }
